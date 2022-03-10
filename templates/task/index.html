@@ -1,0 +1,15 @@
+{% extends 'task\base.html'%}
+
+{% block codeblock %}
+<h2> Student Name </h2>
+<ol>
+{% if student_infoo %}
+{% for student in student_infoo %}
+ <li><a style="text-decoration: none; padding:8px" href="{% url 'students' student.id %}">{{ student.Student_fname }} {{ student.Student_lname }}</a></li>
+
+
+{% endfor %}
+{% endif %}
+</ol>
+
+{% endblock %}

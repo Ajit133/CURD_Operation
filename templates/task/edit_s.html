@@ -1,0 +1,23 @@
+{% extends 'task\base.html'%}
+
+{% block codeblock %}
+<h2>This is edit butoom</h2>
+<form action="" method="POST">
+{% csrf_token %}
+{{S_Form.as_p}}
+<input type="submit" name ="submit" value="submit">
+</form>
+<!-- <form  method="POST">
+    {% csrf_token %}
+    {% for student in s_form %}
+
+    {{ student }}
+    {% endfor %}
+    <button type="Submit">Submit</button>
+
+
+</form> -->
+
+
+
+{% endblock %}

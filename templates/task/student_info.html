@@ -1,0 +1,51 @@
+{% extends 'task\base.html'%}
+
+{% block codeblock %}
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Student FName</th>
+        <th scope="col">Student LName</th>
+        <th scope="col">DateOfBirth</th>
+        <th scope="col">Gender</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td>{{s_id.Student_fname}}</td>
+        <td>{{s_id.Student_lname}}</td>
+        <td>{{s_id.Birth_Date}}</td>
+        <td>{{s_id.Gender}}</td>
+        <th>{{s_id.description}}</th>
+      </tr>
+    </tbody>
+  </table>
+
+  <a class="btn btn-primary" href="{% url 'home' %}">Back</a>
+  <a class="btn btn-warning" href="{% url 's_edit' s_id.id %}">Edit</a>
+  <a class="btn btn-danger" href="{% url 'delete' s_id.id %}">Delete</a>
+
+{% endblock %}
+<!-- <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Student First Name</th>
+        <th scope="col">Student Last Name</th>
+        <th scope="col">Date Of Birth</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{s_id.Student_fname}}</td>
+        <td>{{s_id.Student_lname}}</td>
+        <td>{{s_id.Birth_Date}}</td>
+      </tr>
+    </tbody>
+  </table> -->
+  <!-- <h2> Student_Full_Name : {{s_id.Student_fname}} {{s_id.Student_lname}}</h2>
+<h2> Date Of Birth : {{s_id.Birth_Date}}</h2>
+<hr>
+<h2>Student Other Infromation</h2> -->
